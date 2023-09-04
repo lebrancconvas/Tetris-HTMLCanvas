@@ -1,7 +1,7 @@
 import { Rect } from "./rect";
 import { Tetrominoes } from "./tetrominoes";
 
-export class I extends Tetrominoes {
+export class O extends Tetrominoes {
   constructor(x: number, y: number, color: string) {
     super(x, y, color);
   }
@@ -16,10 +16,11 @@ export class I extends Tetrominoes {
     const rect2 = new Rect(this.x + rectWidth, this.y, rectWidth, rectHeight, this.color);
     rect2.draw(c);
 
-    const rect3 = new Rect(this.x + rectWidth * 2, this.y, rectWidth, rectHeight, this.color);
+    const rect3 = new Rect(this.x, this.y + rectHeight, rectWidth, rectHeight, this.color);
     rect3.draw(c);
 
-    const rect4 = new Rect(this.x + rectWidth * 3, this.y, rectWidth, rectHeight, this.color);
+    const rect4 = new Rect(this.x + rectWidth, this.y + rectHeight, rectWidth, rectHeight, this.color);
     rect4.draw(c);
   }
 };
+

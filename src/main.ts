@@ -1,5 +1,5 @@
 import { canvas, ctx, config } from './canvas';
-import { Board, I } from './components';
+import { Board, I, O } from './components';
 
 // Prepare the canvas.
 canvas.width = config.width;
@@ -23,3 +23,6 @@ board.draw(ctx);
 // Tetrominos.
 const i = new I((canvas.width - boardWidth) / 2, (canvas.height - boardHeight) / 2, 'Green');
 i.draw(ctx);
+
+const o = new O((canvas.width - boardWidth) / 2, (canvas.height - boardHeight) / 2, 'Blue');
+o.draw(ctx);
