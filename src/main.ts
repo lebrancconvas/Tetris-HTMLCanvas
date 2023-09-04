@@ -1,5 +1,5 @@
 import { canvas, ctx, config } from './canvas';
-import { Board } from './components';
+import { Board, I } from './components';
 
 // Prepare the canvas.
 canvas.width = config.width;
@@ -9,15 +9,17 @@ canvas.style.backgroundColor = config.backgroundColor;
 // Code.
 
 // Title.
-ctx.font = '48px Arial';
-ctx.fillStyle = 'black';
-ctx.textAlign = 'center';
-ctx.fillText('Tetris', canvas.width / 2, 100);
+// ctx.font = '48px Arial';
+// ctx.fillStyle = 'black';
+// ctx.textAlign = 'center';
+// ctx.fillText('Tetris', canvas.width / 2, 100);
 
 // Board.
 const boardWidth = 400;
-const boardHeight = 600;
+const boardHeight = 800;
 const board = new Board((canvas.width - boardWidth) / 2, (canvas.height - boardHeight) / 2, boardWidth, boardHeight);
 board.draw(ctx);
 
-
+// Tetrominos.
+const i = new I((canvas.width - boardWidth) / 2, (canvas.height - boardHeight) / 2, 'Green');
+i.draw(ctx);

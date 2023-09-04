@@ -12,8 +12,8 @@ export class I {
   }
 
   draw(c: CanvasRenderingContext2D) {
-    const rectWidth = 50;
-    const rectHeight = 50;
+    const rectWidth = 40;
+    const rectHeight = 40;
 
     const rect1 = new Rect(this.x, this.y, rectWidth, rectHeight, this.color);
     rect1.draw(c);
@@ -27,4 +27,4 @@ export class I {
     const rect4 = new Rect(this.x + rectWidth * 3, this.y, rectWidth, rectHeight, this.color);
     rect4.draw(c);
   }
-}; 
+};
