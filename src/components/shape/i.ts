@@ -22,4 +22,8 @@ export class I extends Tetrominoes {
     const rect4 = new Rect(this.x + rectWidth * 3, this.y, rectWidth, rectHeight, this.color);
     rect4.draw(c);
   }
+
+  update() {
+    super.update();
+  }
 };

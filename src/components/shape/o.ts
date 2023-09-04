@@ -22,5 +22,9 @@ export class O extends Tetrominoes {
     const rect4 = new Rect(this.x + rectWidth, this.y + rectHeight, rectWidth, rectHeight, this.color);
     rect4.draw(c);
   }
+
+  update() {
+    super.update();
+  }
 };
 

@@ -25,6 +25,7 @@ const o = new O((canvas.width - boardWidth) / 2, (canvas.height - boardHeight) /
 
 board.draw(ctx);
 i.draw(ctx);
+o.draw(ctx);
 
 // Game Loop.
 setInterval(() => {
@@ -33,7 +34,13 @@ setInterval(() => {
   ctx.fillText('Tetris', canvas.width / 2, 30);
   board.draw(ctx);
   if(i.y < (canvas.height - boardHeight) / 2 + boardHeight - 40) {
-    i.y += 40;
+    i.update();
   }
+
+  if(o.y < (canvas.height - boardHeight) / 2 + boardHeight - 40) {
+    o.update();
+  }
+
   i.draw(ctx);
+  o.draw(ctx);
 }, 1000);

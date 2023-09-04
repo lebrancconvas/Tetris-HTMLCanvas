@@ -12,4 +12,8 @@ export class Tetrominoes {
   draw(c: CanvasRenderingContext2D) {
     c.beginPath();
   }
+
+  update() {
+    this.y += 40;
+  }
 };
