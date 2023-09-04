@@ -1,5 +1,6 @@
 import { canvas, ctx, config } from './canvas';
 import { Board, I, O } from './components';
+import { Howl } from 'howler';
 
 // Prepare the canvas.
 canvas.width = config.width;
@@ -7,6 +8,13 @@ canvas.height = config.height;
 canvas.style.backgroundColor = config.backgroundColor;
 
 // Code.
+
+// Audio.
+const audio = new Howl({
+  src: '/assets/audio/soundtrack/soundtrack_01.mp3'
+});
+audio.volume(0.5);
+// audio.play();
 
 // Title.
 ctx.font = '23px Arial';
