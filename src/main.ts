@@ -26,6 +26,7 @@ const o = new O((canvas.width - boardWidth) / 2, (canvas.height - boardHeight) /
 board.draw(ctx);
 i.draw(ctx);
 
+// Game Loop.
 setInterval(() => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = 'Black';
